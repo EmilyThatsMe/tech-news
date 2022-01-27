@@ -9,11 +9,12 @@ html {
   margin: 0;
   font-family: sans-serif;
   color: #333;
+  background-color: #b1e9ac;
 }
 
 a {
   text-decoration: none;
-  color: #225ca3;
+  color: #b1e9ac;
   font-weight: bold;
   transition: color 0.1s;
 }
@@ -22,8 +23,14 @@ a:hover {
   color: #3486eb;
 }
 
+#logout {
+  color: #b1e9ac;
+  margin-right: 20px;
+}
+
 button {
-  background-color: #225ca3;
+  background-color: #333;
+  width: 13%;
   border: 0;
   padding: 1%;
   color: white;
@@ -71,7 +78,6 @@ form label {
 .wrapper {
   width: 100%;
   min-height: 100%;
-  max-width: 1200px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -80,13 +86,30 @@ form label {
 header {
   border-bottom: 1px solid #ccc;
   display: flex;
+  flex-direction: column-reverse;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   padding: 0 1%;
+  background-color: #333;
+  height: 10rem;
 }
 
 header h1 {
-  font-size: 1em;
+  font-size: 2rem;
+  background-color: #b1e9ac;
+  filter: drop-shadow(5px 5px rgb(123, 119, 119));
+  margin-left: 1rem;
+  margin-top: 0px;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+header h1 a {
+  color: #333;
+}
+
+nav {
+  padding: 1rem;
 }
 
 main {
@@ -123,6 +146,18 @@ main {
 .post {
   margin-bottom: 2%;
   line-height: 150%;
+  border: solid;
+  padding: 30px 15px;
+  position: relative;
+}
+
+.post .title {
+  background-color: #333;
+  width: 100%;
+  padding: 0.5rem;
+  position: absolute;
+  top: 0px;
+  left: 0px;
 }
 
 .post .title span {
@@ -134,15 +169,6 @@ main {
 .edit-link {
   display: block;
   margin: -1.5% 0 2% 0;
-}
-
-.upvote-btn {
-  background-color: #197d0f;
-  transition: background-color 0.1s;
-}
-
-.upvote-btn:hover {
-  background-color: #1f9c13;
 }
 
 .comment-form {
